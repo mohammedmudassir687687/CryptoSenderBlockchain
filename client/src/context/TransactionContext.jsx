@@ -12,11 +12,16 @@ const getEthereumContract = () => {
     const signer = provider.getSigner();
     const transactionContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-    console.log({provider, signer, transactionContract});
+    return transactionContract;
 }
 
 export const TransactionProvider = ({ children }) => {
+    const [formData, setFormData] = useState({ addressTo: '', amount: '', keyword: '', message: ''});
     const [currentAccount, setCurrentAccount] = useState('');
+
+    const handleChange = (e, name) => {
+        setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
+    }
 
     const checkIfWalletIsConnected = async () => {
         try {            
@@ -57,7 +62,8 @@ export const TransactionProvider = ({ children }) => {
         try {
             if (!ethereum) return alert('Please install metamask');
 
-            
+            const { addressTo, amount, keyword, message } = formData;
+            const transactionContract = getEthereumContract();
         } catch (error) {
             console.log(error);
             throw new Error('No ethereum object.')
@@ -69,7 +75,7 @@ export const TransactionProvider = ({ children }) => {
     }, [])
 
     return (
-        <TransactionContext.Provider value={{ connectWallet, currentAccount }}>
+        <TransactionContext.Provider value={{ connectWallet, currentAccount, formData, setFormData, handleChange, sendTransaction }}>
             { children }
         </TransactionContext.Provider>
     );
