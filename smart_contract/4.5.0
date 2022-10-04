@@ -1,0 +1,16 @@
++ hardhat-gas-reporter@1.0.8
++ ts-node@10.9.1
++ @nomiclabs/hardhat-etherscan@3.0.0
++ @types/mocha@9.1.0
++ solidity-coverage@0.8.1
++ @nomicfoundation/hardhat-chai-matchers@1.0.0
++ @typechain/hardhat@6.1.2
++ @nomicfoundation/hardhat-network-helpers@1.0.0
++ typescript@4.8.4
+added 299 packages from 324 contributors and audited 1747 packages in 27.602s
+
+160 packages are looking for funding
+  run `npm fund` for details
+
+found 119 vulnerabilities (7 low, 39 moderate, 49 high, 24 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
