@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const API_KEY = import.meta.env.VITE_GIPHY_API;
 

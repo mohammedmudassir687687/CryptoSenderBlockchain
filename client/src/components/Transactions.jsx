@@ -33,6 +33,7 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
             </>
           )}
 
+        </div>
             <img 
               src={gifUrl || url}
               alt='gif'
@@ -42,7 +43,6 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
             <div className='bg-black p-3 px-5 w-max rounded-3xl -mt-5 shadow-2xl'>
               <p className='text-[#37c7da] font-bold'>{timestamp}</p>
             </div>
-        </div>
       </div>
     </div>
   );
