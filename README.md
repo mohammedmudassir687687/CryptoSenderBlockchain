@@ -1,5 +1,5 @@
 # CryptoSenderEth
-A Full Stack Web3 Blockchain Ethereum Smart Contract DApp for making Ethereum worldwide using Metamask.
+A Full Stack Web3 Blockchain Ethereum Smart Contract DApp for making Ethereum transactions worldwide using Metamask.
 
 The frontend of the application i.e., client is built using HTML, Tailwind CSS, JavaScript, React, React-Context-Api and React-Custom-Hooks.
 The gifs for the transactions are implemented through giphy API from https://developers.giphy.com/
